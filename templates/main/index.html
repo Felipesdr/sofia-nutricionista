@@ -37,73 +37,44 @@
     </button>
   </div>
   {%endif%}
-  <!-- Quem somos nos -->
-  <section class="my-5 background-orange" id="quem-somos-nos">
-
+  <!-- About -->
+  {% if about %}
+  <section class="my-5" id="quem-somos-nos">
     <div class="card mb-3 mx-auto border-0" style="max-width: 1142px;">
-      <div class="row g-0 bg-dark">
+      <div class="row g-0 bg-white">
         <div class="col-md-4">
-          <img src="imgs/quem-somos-nos.jpg" class="img-fluid rounded-start" alt="...">
+          <img src="{{about.photo.url}}" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h2 class="card-title text-orange fs-2 text-style1">LHAMA BARBER SHOP</h2>
-            <h5 class="card-title text-white fs-3 fst-italic">Quem somos nós?</h5>
-            <p class="card-text text-white fs-5">Descubra a Lhama Barbershop, onde tradição e estilo se unem. Desde
-              3032, oferecemos cortes de cabelo e cuidados masculinos de alta qualidade, com uma equipe de lhamas e
-              alpacas dedicada e apaixonada pelo ofício. Nosso ambiente acolhedor e descontraído garante uma experiência
-              relaxante e satisfatória para todos os clientes. Venha nos visitar e descubra por que somos a escolha
-              preferida dos homens que buscam qualidade e estilo.</p>
-            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            <h2 class="card-title fs-2 text-green text-style1">Sofia Nascimento Andrade</h2>
+            <h5 class="card-title text-green fs-3 fst-italic">Sobre mim</h5>
+            <p class="card-text fs-5">{{about.text}}</p>
           </div>
         </div>
       </div>
     </div>
-
+  {% endif %}
   </section>
 
-  <!-- Servicos -->
-  <div class="container  row mx-auto my-5 g-5 py-5 cointainer-servicos border-top-0  border-sm-0" id="servicos">
+  {% if expertises %}
+  <!-- Expertises -->
+  <div class="container  row mx-auto my-5 g-5 py-5 cointainer-expertises border-top-0  border-sm-0" id="expertises">
+    <h2 class="text-center fst-italic">AREAS DE ATUAÇÂO</h2>
 
-    <h2 class="text-center fst-italic">SERVIÇOS</h2>
-
-    <div class="col-lg-4 col-sm-12">
-      <div class="card ">
-        <img src="imgs/servicos1.png" class="card-img-top" alt="...">
+    {% for exp in expertises %}
+    <div class="col-lg-3 col-sm-12">
+      <div class="card border-0">
+        <img src="{{exp.photo.url}}" class="card-img-left w-75 h-75" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Barba</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn fw-bold">Agendar serviço</a>
+          <h5 class="card-title">{{exp.title}}</h5>
+          <p class="card-text">{{exp.text}}</p>
         </div>
       </div>
     </div>
-
-
-    <div class="col-lg-4 col-sm-12">
-      <div class="card">
-        <img src="imgs/servicos3.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Cabelo</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn fw-bold">Agendar serviço</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-sm-12">
-      <div class="card ">
-        <img src="imgs/servicos2.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Sobrancelha</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn fw-bold">Agendar serviço</a>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
+  {% endif %}
 
   <!-- Facilidades -->
   <section class="my-4 py-5 container-facilidades" id="facilidades">
