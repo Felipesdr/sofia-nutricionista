@@ -3,7 +3,6 @@
 /* Nav bar modificações bootstrap */
 
 .agendar_consulta{
-
     background-color: #88b94dad;
     color: #7b3715;
     border-radius: 8px;
@@ -45,7 +44,7 @@
 
 .carousel-item-text h5 {
     color: darkorange;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 .carousel-item-text p {
@@ -54,14 +53,6 @@
 }
 
 /*Serviços*/
-
-.cointainer-servicos{
-
-    border-color: #FF04B3 !important;
-    border-style: solid;
-    border-width: 1px;
-    border-bottom-right-radius: 30px !important;
-}
 
 .cointainer-servicos h2{
     color: #181310;
@@ -73,24 +64,22 @@
     background-color: darkorange;
 }
 
-/* Facilidades */
-
-.container-facilidades{
-
-    background-color: #181310;
-
-}
-
-.text-color-facilidades{
-    color: #F1C213;
+/* Consulta */
+.text-color-consulta{
+    color: #181310 !important;
 }
 
 .facilidades-size{
-
     width: 332px;
 }
 
-/*Barbeiros*/
+/*Artigos*/
+
+.article{
+  width: 330px;
+  height: 430px;
+  background-color: #181310;
+}
 
 /*Contato*/
 
@@ -104,12 +93,8 @@
 
 /* text colors */
 
-.text-green {
-    color: #89b94d !important;
-}
-
-.text-brown {
-    color: #7b3715 !important;
+.text-orange {
+    color: darkorange;
 }
 
 .text-red{
@@ -152,7 +137,7 @@
     .cointainer-servicos{
         border-width: 0px;
     }
-    
+
 }
 
 @media screen and (max-width: 992px) {
@@ -178,10 +163,6 @@
     .cointainer-servicos{
         border-width: 0px;
     }
-    
+
 }
-
-
-
-
 
